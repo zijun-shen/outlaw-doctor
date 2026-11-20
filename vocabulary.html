@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>化外之醫｜第一集詞彙表</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F4F5F5;
+  --paper:#FFFFFF;
+  --ink:#24292B;
+  --soft:#565F63;
+  --muted:#9AA2A5;
+  --wine:#4A5458;
+  --wine-deep:#2C3336;
+  --rose:#6F7B80;
+  --gold:#8C969A;
+  --gold-soft:#B4BCBF;
+  --cream:#F7F8F8;
+  --line:rgba(74,84,88,.13);
+  --line-soft:rgba(74,84,88,.075);
+  --shadow:0 18px 48px rgba(44,51,54,.07);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  color:var(--ink);
+  font-family:'Noto Serif TC',serif;
+  line-height:1.8;
+  background:
+    radial-gradient(circle at 14% 3%,rgba(255,255,255,.95),transparent 24%),
+    linear-gradient(180deg,#F6F7F7 0%,#ECEEEE 100%);
+}
+.nav{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1rem 2.2rem;
+  background:rgba(244,245,245,.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+.nav a,.nav span{
+  font-family:'Cormorant Garamond',serif;
+  font-size:.88rem;
+  letter-spacing:.15em;
+  font-style:italic;
+  color:var(--muted);
+  text-decoration:none;
+}
+.nav a::before{content:'← '}
+.hero{
+  padding:5.2rem 1.5rem 3.8rem;
+  text-align:center;
+  border-bottom:1px solid var(--line-soft);
+  background:rgba(255,255,255,.42);
+}
+.seal{
+  width:58px;height:58px;
+  margin:0 auto 1.25rem;
+  display:flex;align-items:center;justify-content:center;
+  border:1px solid rgba(74,84,88,.58);
+  border-radius:50%;
+  color:var(--wine);
+  font-size:1.45rem;
+  font-weight:400;
+}
+.eyebrow{
+  margin:0 0 .9rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:.78rem;
+  letter-spacing:.34em;
+  text-transform:uppercase;
+  color:var(--gold);
+}
+h1{
+  margin:0;
+  color:var(--wine-deep);
+  font-size:clamp(2rem,4.5vw,3.35rem);
+  font-weight:400;
+  letter-spacing:.06em;
+  line-height:1.4;
+}
+.hero-en{
+  margin:.7rem 0 0;
+  color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.15rem,2vw,1.42rem);
+  font-style:italic;
+}
+main{max-width:1040px;margin:0 auto;padding:3.5rem 2rem 5rem}
+.intro{
+  display:block;
+  margin-bottom:1.3rem;
+}
+.intro h2{
+  margin:0;
+  color:var(--wine-deep);
+  font-size:1.35rem;
+  font-weight:500;
+  letter-spacing:.03em;
+}
+.table-wrap{
+  overflow:hidden;
+  background:var(--paper);
+  border:1px solid var(--line-soft);
+  border-radius:18px;
+  box-shadow:var(--shadow);
+}
+table{width:100%;border-collapse:collapse}
+thead{background:rgba(74,84,88,.035)}
+th{
+  padding:1.05rem 1rem;
+  text-align:left;
+  color:var(--wine);
+  font-family:'Noto Sans TC',sans-serif;
+  font-size:.75rem;
+  font-weight:500;
+  letter-spacing:.12em;
+  border-bottom:1px solid var(--line);
+}
+td{
+  padding:1.05rem 1rem;
+  color:var(--soft);
+  vertical-align:middle;
+  border-bottom:1px solid var(--line-soft);
+  font-size:.94rem;
+}
+tbody tr:last-child td{border-bottom:none}
+tbody tr{transition:background .2s ease}
+tbody tr:hover{background:rgba(140,150,154,.035)}
+.num{
+  width:70px;
+  color:var(--gold);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.08rem;
+  font-style:italic;
+  letter-spacing:.06em;
+}
+.word{
+  color:var(--wine-deep);
+  font-size:1.05rem;
+  font-weight:500;
+  white-space:nowrap;
+}
+.word-line{display:flex;align-items:center;gap:.55rem;flex-wrap:wrap}
+.pinyin{
+  font-family:'Times New Roman',Times,serif;
+  font-size:1rem;
+  color:var(--wine);
+  letter-spacing:.01em;
+  white-space:nowrap;
+}
+.core-row .word,
+.core-row .pinyin,
+.core-row .pos,
+.core-row .en{color:var(--wine-deep)}
+.secondary-row .word,
+.secondary-row .pinyin,
+.secondary-row .pos,
+.secondary-row .en{color:var(--muted)}
+.secondary-row .word{font-weight:400}
+.pos{
+  font-family:'Noto Sans TC',sans-serif;
+  color:var(--muted);
+  font-size:.84rem;
+  white-space:nowrap;
+}
+.en{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.02rem;
+  color:var(--soft);
+}
+footer{
+  padding:2.5rem 1.5rem 3.5rem;
+  text-align:center;
+  color:var(--muted);
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:.82rem;
+  letter-spacing:.08em;
+}
+@media(max-width:760px){
+  .nav{padding:.9rem 1.1rem}
+  .nav span{display:none}
+  .hero{padding:4.2rem 1.2rem 3.1rem}
+  main{padding:2.6rem 1rem 4rem}
+  .intro{display:block}
+  .table-wrap{background:transparent;border:none;box-shadow:none;overflow:visible}
+  table,tbody,tr,td{display:block;width:100%}
+  thead{display:none}
+  tbody{display:grid;gap:.8rem}
+  tr{
+    background:var(--paper);
+    border:1px solid var(--line-soft);
+    border-radius:14px;
+    box-shadow:0 10px 26px rgba(44,51,54,.05);
+    padding:.95rem 1rem;
+  }
+  td{
+    display:grid;
+    grid-template-columns:82px 1fr;
+    gap:.75rem;
+    padding:.42rem 0;
+    border-bottom:none;
+    align-items:baseline;
+  }
+  td::before{
+    content:attr(data-label);
+    color:var(--muted);
+    font-family:'Noto Sans TC',sans-serif;
+    font-size:.72rem;
+    letter-spacing:.08em;
+  }
+  .num{width:auto}
+  .word,.pinyin,.pos{white-space:normal}
+}
+
+.word-line{cursor:pointer}.word-line:hover{color:var(--gold)}.spk{font-size:.75rem;color:var(--gold);margin-left:.2rem}
+.line-cell{font-size:.88rem;color:var(--muted)}
+.time{font-family:'Times New Roman',Times,serif;font-size:.95rem;color:var(--gold);white-space:nowrap}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <a href="index.html">返回《化外之醫》主頁</a>
+  <span>Between Characters · Vocabulary</span>
+</nav>
+<header class="hero">
+  <div class="seal">詞</div>
+  <p class="eyebrow">Episode 1 Vocabulary</p>
+  <h1>第一集詞彙表</h1>
+  <p class="hero-en">Vocabulary from the Summary &amp; Character Introductions</p>
+</header>
+<main>
+  <div class="intro"><h2>共 61 個詞語</h2><p style="color:var(--muted);font-size:.88rem;margin:.3rem 0 0">依第一集出現的時間排序　深色：目標生詞　淺色：理解即可　點中文可聽發音</p></div>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>編號</th><th>中文</th><th>拼音</th><th>詞性</th><th>英文</th><th>劇中台詞</th></tr></thead>
+      <tbody>
+<tr class="core-row"><td class="num" data-label="編號">01</td><td class="word" data-label="中文"><div class="word-line" data-say="巧妙">巧妙<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">qiǎo miào</td><td class="pos" data-label="詞性">形容詞</td><td class="en" data-label="英文">clever; ingenious (as in fate&#x27;s arrangement)</td><td class="line-cell" data-label="台詞">命運的安排總是巧妙</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">02</td><td class="word" data-label="中文"><div class="word-line" data-say="太平間">太平間<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">tài píng jiān</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">hospital morgue</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">03</td><td class="word" data-label="中文"><div class="word-line" data-say="屍體">屍體<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shī tǐ</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">corpse; dead body</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">04</td><td class="word" data-label="中文"><div class="word-line" data-say="廢棄醫療用品">廢棄醫療用品<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">fèi qì yī liáo yòng pǐn</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">discarded medical supplies</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">05</td><td class="word" data-label="中文"><div class="word-line" data-say="不配">不配<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">bú pèi</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to not deserve</td><td class="line-cell" data-label="台詞">你不配拿這個錢</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">06</td><td class="word" data-label="中文"><div class="word-line" data-say="說話不算話">說話不算話<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shuō huà bù suàn huà</td><td class="pos" data-label="詞性">慣用語</td><td class="en" data-label="英文">to break one&#x27;s word</td><td class="line-cell" data-label="台詞">說話又不算話</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">07</td><td class="word" data-label="中文"><div class="word-line" data-say="外勞">外勞<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">wài láo</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">foreign laborer (older term for migrant worker)</td><td class="line-cell" data-label="台詞">你們台灣人只會欺負外勞</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">08</td><td class="word" data-label="中文"><div class="word-line" data-say="舉報">舉報<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jǔ bào</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to report (someone)</td><td class="line-cell" data-label="台詞">我可以舉報你</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">09</td><td class="word" data-label="中文"><div class="word-line" data-say="就當我們沒見過">就當我們沒見過<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jiù dāng wǒ men méi jiàn guò</td><td class="pos" data-label="詞性">語用</td><td class="en" data-label="英文">Let&#x27;s pretend we never saw each other.</td><td class="line-cell" data-label="台詞">就當我們沒見過</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">10</td><td class="word" data-label="中文"><div class="word-line" data-say="相當於">相當於<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">xiāng dāng yú</td><td class="pos" data-label="詞性">語法</td><td class="en" data-label="英文">to be equivalent to</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">11</td><td class="word" data-label="中文"><div class="word-line" data-say="報酬">報酬<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">bào chóu</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">payment; reward</td><td class="line-cell" data-label="台詞">曾經我以為那是理所應得的報酬</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">12</td><td class="word" data-label="中文"><div class="word-line" data-say="理所應得">理所應得<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">lǐ suǒ yīng dé</td><td class="pos" data-label="詞性">成語</td><td class="en" data-label="英文">rightfully deserved</td><td class="line-cell" data-label="台詞">曾經我以為那是理所應得的報酬</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">13</td><td class="word" data-label="中文"><div class="word-line" data-say="歧視">歧視<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">qí shì</td><td class="pos" data-label="詞性">動詞／名詞</td><td class="en" data-label="英文">to discriminate; discrimination</td><td class="line-cell" data-label="台詞">但為何這份報酬充滿了歧視？</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">14</td><td class="word" data-label="中文"><div class="word-line" data-say="治療">治療<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhì liáo</td><td class="pos" data-label="詞性">動詞／名詞</td><td class="en" data-label="英文">to treat; treatment</td><td class="line-cell" data-label="台詞">讓媽媽得到最好的治療</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">15</td><td class="word" data-label="中文"><div class="word-line" data-say="專科醫生">專科醫生<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhuān kē yī shēng</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">medical specialist</td><td class="line-cell" data-label="台詞">我是一個專科醫生</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">16</td><td class="word" data-label="中文"><div class="word-line" data-say="復健">復健<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">fù jiàn</td><td class="pos" data-label="詞性">名詞／動詞</td><td class="en" data-label="英文">rehabilitation; physical therapy</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">17</td><td class="word" data-label="中文"><div class="word-line" data-say="繃得太緊">繃得太緊<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">bēng de tài jǐn</td><td class="pos" data-label="詞性">片語</td><td class="en" data-label="英文">wound too tight; under too much pressure</td><td class="line-cell" data-label="台詞">你把我們繃得太緊了</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">18</td><td class="word" data-label="中文"><div class="word-line" data-say="放鬆">放鬆<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">fàng sōng</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to relax</td><td class="line-cell" data-label="台詞">我覺得小孩子需要放鬆</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">19</td><td class="word" data-label="中文"><div class="word-line" data-say="人力仲介">人力仲介<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">rén lì zhòng jiè</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">labor broker; recruitment agent</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">20</td><td class="word" data-label="中文"><div class="word-line" data-say="凱子">凱子<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">kǎi zi</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">(TW slang) a sucker; someone easily fleeced</td><td class="line-cell" data-label="台詞">他現在是把我當凱子在削嗎？</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">21</td><td class="word" data-label="中文"><div class="word-line" data-say="完蛋">完蛋<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">wán dàn</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to be done for; to be finished</td><td class="line-cell" data-label="台詞">這樣你就完蛋了耶，對不對？</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">22</td><td class="word" data-label="中文"><div class="word-line" data-say="前世">前世<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">qián shì</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">past life</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">23</td><td class="word" data-label="中文"><div class="word-line" data-say="造孽">造孽<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zào niè</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to commit sins</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">24</td><td class="word" data-label="中文"><div class="word-line" data-say="這輩子">這輩子<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhè bèi zi</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">this life</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">25</td><td class="word" data-label="中文"><div class="word-line" data-say="討債">討債<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">tǎo zhài</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to collect a debt; (fig.) to be a burden</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">26</td><td class="word" data-label="中文"><div class="word-line" data-say="江湖術士">江湖術士<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jiāng hú shù shì</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">charlatan; quack</td><td class="line-cell" data-label="台詞">你不要江湖術士給我亂搞啊</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">27</td><td class="word" data-label="中文"><div class="word-line" data-say="亂搞">亂搞<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">luàn gǎo</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to mess around</td><td class="line-cell" data-label="台詞">你不要江湖術士給我亂搞啊</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">28</td><td class="word" data-label="中文"><div class="word-line" data-say="檢舉">檢舉<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jiǎn jǔ</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to report (wrongdoing) to the authorities</td><td class="line-cell" data-label="台詞">我就去檢舉你，你明白嗎？</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">29</td><td class="word" data-label="中文"><div class="word-line" data-say="出示">出示<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">chū shì</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to show; to present (ID, documents)</td><td class="line-cell" data-label="台詞">身分證出示一下</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">30</td><td class="word" data-label="中文"><div class="word-line" data-say="身分證">身分證<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shēn fèn zhèng</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">ID card</td><td class="line-cell" data-label="台詞">身分證出示一下</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">31</td><td class="word" data-label="中文"><div class="word-line" data-say="火警">火警<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">huǒ jǐng</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">fire alarm; fire emergency</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">32</td><td class="word" data-label="中文"><div class="word-line" data-say="癲癇發作">癲癇發作<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">diān xián fā zuò</td><td class="pos" data-label="詞性">片語</td><td class="en" data-label="英文">epileptic seizure</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">33</td><td class="word" data-label="中文"><div class="word-line" data-say="警報器">警報器<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jǐng bào qì</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">alarm (device)</td><td class="line-cell" data-label="台詞">應該是被警報器嚇到了</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">34</td><td class="word" data-label="中文"><div class="word-line" data-say="惹麻煩">惹麻煩<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">rě má fán</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to cause trouble</td><td class="line-cell" data-label="台詞">但不要惹麻煩</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">35</td><td class="word" data-label="中文"><div class="word-line" data-say="小飛俠">小飛俠<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">xiǎo fēi xiá</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">slang nickname for runaway migrant workers</td><td class="line-cell" data-label="台詞">我問問看有沒有哪些「小飛俠」願意去</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">36</td><td class="word" data-label="中文"><div class="word-line" data-say="逃跑移工">逃跑移工<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">táo pǎo yí gōng</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">runaway migrant worker (officially 失聯移工)</td><td class="line-cell" data-label="台詞">小飛俠就是你啦，逃跑移工</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">37</td><td class="word" data-label="中文"><div class="word-line" data-say="醫療">醫療<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">yī liáo</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">medical care</td><td class="line-cell" data-label="台詞">我知道你想給媽媽最好的醫療</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">38</td><td class="word" data-label="中文"><div class="word-line" data-say="復原">復原<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">fù yuán</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to recover; to heal</td><td class="line-cell" data-label="台詞">黃醫師說你復原得很好</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">39</td><td class="word" data-label="中文"><div class="word-line" data-say="腦麻">腦麻<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">nǎo má</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">cerebral palsy</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">40</td><td class="word" data-label="中文"><div class="word-line" data-say="神經外科">神經外科<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shén jīng wài kē</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">neurosurgery</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">41</td><td class="word" data-label="中文"><div class="word-line" data-say="值">值<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhí</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to be worth</td><td class="line-cell" data-label="台詞">還是我就只值兩千元？</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">42</td><td class="word" data-label="中文"><div class="word-line" data-say="健保卡">健保卡<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">jiàn bǎo kǎ</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">National Health Insurance card</td><td class="line-cell" data-label="台詞">問她有沒有健保卡或身分證</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">43</td><td class="word" data-label="中文"><div class="word-line" data-say="判斷">判斷<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">pàn duàn</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to judge; to assess</td><td class="line-cell" data-label="台詞">依我判斷</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">44</td><td class="word" data-label="中文"><div class="word-line" data-say="爆裂性骨折">爆裂性骨折<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">bào liè xìng gǔ zhé</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">burst fracture</td><td class="line-cell" data-label="台詞">可能是爆裂性骨折</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">45</td><td class="word" data-label="中文"><div class="word-line" data-say="轉院">轉院<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhuǎn yuàn</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to transfer to another hospital</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">46</td><td class="word" data-label="中文"><div class="word-line" data-say="身分">身分<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shēn fèn</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">legal status; identity</td><td class="line-cell" data-label="台詞">可是他就說小蘋果沒身分、沒國籍啊</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">47</td><td class="word" data-label="中文"><div class="word-line" data-say="吸收">吸收<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">xī shōu</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to absorb (a cost)</td><td class="line-cell" data-label="台詞">他不想讓神經外科來吸收這筆費用</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">48</td><td class="word" data-label="中文"><div class="word-line" data-say="掛我帳上">掛我帳上<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">guà wǒ zhàng shàng</td><td class="pos" data-label="詞性">語用</td><td class="en" data-label="英文">Put it on my tab; I&#x27;ll pay.</td><td class="line-cell" data-label="台詞">先轉社工，不然就掛我帳上</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">49</td><td class="word" data-label="中文"><div class="word-line" data-say="手術室全滿">手術室全滿<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shǒu shù shì quán mǎn</td><td class="pos" data-label="詞性">片語</td><td class="en" data-label="英文">all operating rooms are full</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">50</td><td class="word" data-label="中文"><div class="word-line" data-say="半身不遂">半身不遂<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">bàn shēn bù suí</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">hemiplegia; partial paralysis</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">51</td><td class="word" data-label="中文"><div class="word-line" data-say="湊合">湊合<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">còu he</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to make do (with what&#x27;s available)</td><td class="line-cell" data-label="台詞">琬平，還是教學手術室湊一下？</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">52</td><td class="word" data-label="中文"><div class="word-line" data-say="麻醉">麻醉<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">má zuì</td><td class="pos" data-label="詞性">名詞／動詞</td><td class="en" data-label="英文">anesthesia; to anesthetize</td><td class="line-cell" data-label="台詞">但我們沒有麻醉醫師</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">53</td><td class="word" data-label="中文"><div class="word-line" data-say="儀器">儀器<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">yí qì</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">instruments; equipment</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">54</td><td class="word" data-label="中文"><div class="word-line" data-say="癱瘓">癱瘓<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">tān huàn</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to be paralyzed</td><td class="line-cell" data-label="台詞">以後可能會下半身癱瘓</td></tr>
+<tr class="core-row"><td class="num" data-label="編號">55</td><td class="word" data-label="中文"><div class="word-line" data-say="實話實說">實話實說<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">shí huà shí shuō</td><td class="pos" data-label="詞性">成語</td><td class="en" data-label="英文">to tell it like it is</td><td class="line-cell" data-label="台詞"></td></tr>
+<tr class="core-row"><td class="num" data-label="編號">56</td><td class="word" data-label="中文"><div class="word-line" data-say="憑什麼">憑什麼<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">píng shén me</td><td class="pos" data-label="詞性">語用</td><td class="en" data-label="英文">What gives you the right…?</td><td class="line-cell" data-label="台詞">你憑什麼輕易對別人判刑？</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">57</td><td class="word" data-label="中文"><div class="word-line" data-say="突發狀況">突發狀況<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">tú fā zhuàng kuàng</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">sudden emergency</td><td class="line-cell" data-label="台詞">突發狀況</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">58</td><td class="word" data-label="中文"><div class="word-line" data-say="氣爆">氣爆<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">qì bào</td><td class="pos" data-label="詞性">名詞</td><td class="en" data-label="英文">gas explosion</td><td class="line-cell" data-label="台詞">有一個大型活動現場發生氣爆</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">59</td><td class="word" data-label="中文"><div class="word-line" data-say="待命">待命<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">dài mìng</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to stand by</td><td class="line-cell" data-label="台詞">各級醫院都要待命</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">60</td><td class="word" data-label="中文"><div class="word-line" data-say="出勤">出勤<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">chū qín</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to be dispatched (on duty)</td><td class="line-cell" data-label="台詞">救護車已全數出勤</td></tr>
+<tr class="secondary-row"><td class="num" data-label="編號">61</td><td class="word" data-label="中文"><div class="word-line" data-say="支援">支援<span class="spk">▶</span></div></td><td class="pinyin" data-label="拼音">zhī yuán</td><td class="pos" data-label="詞性">動詞</td><td class="en" data-label="英文">to provide backup; to support</td><td class="line-cell" data-label="台詞">請求鄰近縣市分隊支援</td></tr>
+      </tbody>
+    </table>
+  </div>
+</main>
+<footer>Between Characters · The Outlaw Doctor · ACTFL 2026</footer>
+<script>
+function speak(t){if(!('speechSynthesis' in window))return;speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='zh-TW';u.rate=0.6;const v=speechSynthesis.getVoices().find(v=>v.lang&&v.lang.replace('_','-').toLowerCase()==='zh-tw');if(v)u.voice=v;speechSynthesis.speak(u);}
+document.querySelectorAll('.word-line').forEach(el=>el.addEventListener('click',()=>speak(el.dataset.say)));
+if('speechSynthesis' in window){speechSynthesis.getVoices();}
+</script>
+</body>
+</html>
